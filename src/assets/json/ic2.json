@@ -1,0 +1,10 @@
+{
+    "icns": 
+    [
+        { "id": "0", "p": "https://twitter.com/StatuesOfSM", "s": "fab", "c": "fab fa-twitter"},
+        { "id": "1", "p": "https://www.instagram.com/StatuesOfSM/", "s": "fab", "c": "fab fa-instagram"},
+        { "id": "2", "p": "https://statuesofsinkingmen.bandcamp.com/", "s": "fab", "c": "fab fa-bandcamp"},
+        { "id": "3", "p": "https://www.youtube.com/channel/UCnGE-cRl4ty1_dZEVVJNpEg?view_as=subscriber", "s": "fab", "c": "fab fa-youtube"}
+    ]
+
+}

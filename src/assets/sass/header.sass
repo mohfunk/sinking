@@ -1,0 +1,110 @@
+$numitems: 15
+$interval: 100/$numitems+1%
+$mid: 30%
+.header
+  display: flex
+  justify-content: space-around
+  align-items: center
+  .rt
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: flex-start
+    vertical-align: middle
+    .title
+      display: flex
+    .rts
+      margin-top: 5%
+      display: flex
+      flex-direction: row
+    h3
+      font-family: $fpg
+      font-size: 12px
+    a
+      font-family: $ful
+      font-size: 16px
+      font-weight: bold
+      text-decoration: none
+      color: $w1
+      display: block
+      padding-left: 1em
+      padding-right: 1em
+      +animation(bout 1500ms linear both)
+      &:hover
+        +animation(bin 1500ms linear both)
+        color: $p4
+      &.router-link-exact-active
+        color: $p4
+      &.ti
+        color: $p4
+        font-family: $fpg
+        font-size: 32px
+        text-align: center
+  .pb
+    padding: 3%
+    display: flex
+    align-items: center
+    button
+      &:active
+        border-style: none
+      &:focus
+        border-style: none
+        outline-style: none
+
+    i
+      padding-left: 1em
+      padding-right: 1em
+      display: block
+      width: 24px
+      height: auto
+      +animation(bout 1500ms linear both)
+      &:hover 
+        +animation(bin 1500ms linear both) 
+        cursor: pointer
+  .icn
+    padding: 3%
+    display: flex
+    align-items: center
+    a
+      text-decoration: none
+    i
+      color: #fff
+      padding-left: 1em
+      padding-right: 1em
+      display: block
+      width: 24px
+      height: auto
+      +animation(bout 1500ms linear both)
+      &:hover 
+        +animation(bin 1500ms linear both) 
+        cursor: pointer
+    color: $or
+    &#title
+      color: $p4
+    color: $rd
+    
+@media all and (max-width: 600px)
+  .header
+    justify-content: center
+    align-items: center
+    align-content: center
+    padding: 0
+    margin: 0
+    .rt
+      align-content: center
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      justify-content: center
+      padding: 0
+      margin: 0
+      a
+        padding: 0
+        margin: 10px 0 10px 0
+        align-self: center
+        font-size: 14px
+        text-align: center
+        &.ti
+          padding: 10px 0 0 0
+          font-size: 22px
+

@@ -1,0 +1,11 @@
+{
+    "rts": 
+    [
+        { "id": "0", "p": "/", "t": "home"},
+        { "id": "1", "p": "/about", "t": "about"},
+        { "id": "2", "p": "/releases", "t": "releases"},
+        { "id": "3", "p": "/friends", "t": "friends"},
+        { "id": "6", "p": "/contact", "t": "contact"}
+    ]
+
+}
