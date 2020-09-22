@@ -19,7 +19,7 @@ export default class Playback {
 
     constructor(p: p5) {
         this.p = p;
-        for( var i = 0; i < 4; ++i ) {
+        for (var i = 0; i < 4; ++i) {
             this.urls[i] = burl;
         }
         this.urls[0] += 'Sinking.mp3';
@@ -32,17 +32,13 @@ export default class Playback {
 
     // Playback Control
     public play(index?: number) {
-        if ( this.playing.isPlaying() ) this.playing.stop();
-        if ( index !== undefined ) this.pi = index;
+        if (this.playing.isPlaying()) this.playing.stop();
+        if (index !== undefined) this.pi = index;
+
         this.playing.play();
     }
-    public pause() {
-        if ( this.playing.isPlaying() ) {
-            this.playing.pause();
-        } else { 
-            this.playing.play();
-        }
-    }
+    public pause = () => this.playing.isPlaying() ? this.playing.pause() : this.playing.play();
+
     public replay() {
         this.playing.stop();
         this.playing.play();
@@ -71,33 +67,18 @@ export default class Playback {
             this.vol = 0;
         }
     }
-    public next() {
-        if ( this.pi < smax ) {
-            this.changeSong(1);
-        } else {
-            this.changeSong(-2);
-        }
-    }
-    public prev() {
-        if ( this.pi > 0 ) {
-            this.changeSong(-1);
-        } else {
-            this.changeSong(2);
-        }
-    }
+    public next = () => this.pi < smax ? this.changeSong(1) : this.changeSong(-2);
+    public prev = () => this.pi > 0 ? this.changeSong(-1) : this.changeSong(2);
 
     private preload(): p5.SoundFile {
-        this.songs[0] =  (this.p as any).loadSound(this.urls[0]);
-        this.songs[1] =  (this.p as any).loadSound(this.urls[1]);
+        this.songs[0] = (this.p as any).loadSound(this.urls[0]);
+        this.songs[1] = (this.p as any).loadSound(this.urls[1]);
         this.songs[2] = (this.p as any).loadSound(this.urls[2]);
 
         return this.songs[2];
     }
-    private jump(dir: number) {
-        const posn: number = this.playing.currentTime();
-        const dur: number = (10 * dir);
-        this.playing.jump(posn + dur, this.duration - dur);
-    }
+    private jump = (dir: number) => this.playing.jump(this.playing.currentTime() + (10 * dir), this.duration - (10 * dir));
+
     private changeSong(d: number) {
         this.playing.stop();
         this.playing = this.songs[this.pi + d];

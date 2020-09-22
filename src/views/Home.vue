@@ -1,37 +1,55 @@
 <template>
-    <div class="home">
-        <h1 class="title">statues of sinking men</h1>
-        <h3 class="title">Embrace The Stage of Sentimental Night</h3>
-        <!-- Begin Mailchimp Signup Form -->
-        <div id="mc_embed_signup">
-            <form action="https://statuesofsinkingmen.us18.list-manage.com/subscribe/post?u=8df26402b4cd749dcb07033ac&amp;id=9c64b173f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <div id="mc_embed_signup_scroll">
-                    <label for="mce-EMAIL">Subscribe to our mailing list</label>
-                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8df26402b4cd749dcb07033ac_9c64b173f0" tabindex="-1" value=""></div>
-                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                </div>
-            </form>
+  <div class="home">
+    <h1 class="title">statues of sinking men</h1>
+    <h3 class="title">Embrace The Stage of Sentimental Night</h3>
+    <div id="mc_embed_signup">
+      <form
+        action="https://statuesofsinkingmen.us18.list-manage.com/subscribe/post?u=8df26402b4cd749dcb07033ac&amp;id=9c64b173f0"
+        method="post"
+        id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form"
+        class="validate"
+        target="_blank"
+        novalidate
+      >
+        <div id="mc_embed_signup_scroll">
+          <label for="mce-EMAIL">Subscribe to our mailing list</label>
+          <input
+            type="email"
+            value
+            name="EMAIL"
+            class="email"
+            id="mce-EMAIL"
+            placeholder="email address"
+            required
+          />
+          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_8df26402b4cd749dcb07033ac_9c64b173f0" tabindex="-1" value />
+          </div>
+          <div class="clear">
+            <input
+              type="submit"
+              value="Subscribe"
+              name="subscribe"
+              id="mc-embedded-subscribe"
+              class="button"
+            />
+          </div>
         </div>
+      </form>
     </div>
+  </div>
 </template>
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue } from "vue-property-decorator";
 @Component({
-    name: 'Home',
-    props: {
-    },
-    components: {
-    },
+  name: "Home",
+  props: {},
+  components: {},
 })
-
-export default class Home extends Vue {
-
-}
+export default class Home extends Vue {}
 </script>
 <style lang="sass">
-
 #mc_embed_signup form
   text-align: center
   padding: 50px 0 10px 0
@@ -111,8 +129,6 @@ export default class Home extends Vue {
     margin-left: 1.05em
     text-align: left
     padding: .5em 0
-
-/* positions button horizontally in line with input
 
 @media (max-width: 768px)
   #mc_embed_signup

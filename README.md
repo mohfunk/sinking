@@ -1,5 +1,7 @@
 # sinking
 
+Website for a friend's musical album with audio visualization, feel free to clone.
+
 ## Project setup
 ```
 yarn install
